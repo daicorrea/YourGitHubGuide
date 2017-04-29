@@ -21,6 +21,12 @@ h1 {
     align-items: initial;
 }
 
+#header {
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
 #about {
     display: block;
     width: 100vw;
