@@ -1,8 +1,59 @@
 body {
     margin: 0;
     padding: 0;
+    color: #FFF;
 }
 
 section {
     display: block;
 }
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+}
+
+#about {
+    display: block;
+    width: 100vw;
+    background-color: #6C7A89;
+}
+
+#starting {
+    display: block;
+    width: 100vw;
+    background-color: #178892;
+}
+
+#project {
+    display: block;
+    width: 100vw;
+    background-color: #FBB44C;
+}
+
+#branches {
+    display: block;
+    width: 100vw;
+    background-color: #4495CA;
+}
+
+#wrong-code {
+    display: block;
+    width: 100vw;
+    background-color: #18BC9C;
+}
+
+#wrong-master {
+    display: block;
+    width: 100vw;
+    background-color: #2C3E50;
+}
+
