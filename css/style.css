@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Chau+Philomene+One|Inconsolata|Londrina+Solid");
+
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@ section {
 
 h1 {
     text-align: center;
+    font-family: 'Chau Philomene One', sans-serif;
 }
 
 .container {
@@ -25,8 +28,12 @@ h1 {
     justify-content: center;
     align-items: center;
     color: black;
+    font-family: 'Londrina Solid', cursive;
 }
 
+#header h1{
+    font-size: 60px;
+}
 #about {
     display: block;
     width: 100vw;
@@ -63,3 +70,6 @@ h1 {
     background-color: #2C3E50;
 }
 
+.mycode {
+    font-family: 'Inconsolata', monospace;
+}
