@@ -83,6 +83,13 @@ h2 {
     background-color: #2C3E50;
 }
 
+#footer {
+    display: block;
+    width: 100vw;
+    background-color: #18BC9C;
+    text-align: center;
+}
+
 .myCode {
     font-family: 'Inconsolata', monospace;
     padding: 1%;
