@@ -127,7 +127,7 @@
                     </div>
                     <h2>Pull Request</h2>
                     <div class="content">
-                        <p>If you are working with a team and creating a new feature you can open a <trong>Pull Request</strong> to mean that you finished the code in the branch (a new feature, a bug fix, ...) and it can be tested. This can add to group discussions about changes that can be made to improve the code or just an approval of the code.</p>
+                        <p>If you are working with a team and creating a new feature you can open a <trong>Pull Request</strong> to mean that you finished the code in the branch (a new feature, a bug fix, ...) and it can be tested and if it's okay, it can be joined with the Master's code. This can add to group discussions about changes that can be made to improve the code or just an approval of the code.</p>
                         <p>To open a pull request, go to the branches tab on your project's page and in the line of your branch, you can click on the "New Pull Request" button.</p>
                         <div class="myCode">
                             <img class="full-img" src="img/pull-request.png" alt="New Pull Request">
@@ -137,11 +137,44 @@
                             <img class="full-img" src="img/pull-request-2.png" alt="New Pull Request Page">
                         </div>
                         <p>You can still create commits after you create the Pull Request.</p>
-                        <p>There are two possible </p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p>There are two possible messages of a Pull Request. When there are no conflicts in the code you have in this branch with the maste you will have:</p>
+                        <div class="myCode">
+                            <img class="more-half-img" src="img/pull-request-3.png" alt="No Conflict">
+                        </div>
+                        <p>If there's a conflict, then you will need to resolve the conflicts in the code before joining the code with the Master's code. If that happens you will find the following message:</p>
+                        <div class="myCode">
+                            <img class="more-half-img" src="img/pull-request-4.png" alt="Has Conflict">
+                        </div>
+                        
+                    </div>
+                    <h2>Merging</h2>
+                    <div class="content">
+                        <p>To start merging your code you can use the line:</p>
+                        <div class="myCode">
+                            $ git merge [name-of-the-branch-you-want-to-merge]
+                        </div>
+                        <p>When you use a merge and has conflicts, you will see the following format in your code:</p>
+                        <div class="myCode">
+                            <img class="half-img" src="img/pull-request-5.png" alt="Conflicting Code">
+                        </div>
+                        <p>The red part is what you have in your current Branch and the yellow code is the one that was in the same place in the code you want to merge. In this case the text was altered a little bit so you can choose which one you want to keep and which one you want to erase. Not forgeting to erase the Git tags "<<<<<< HEAD", "====" and ">>>>".</p>
+                        <p>If you have no conflicts in your branch, you can simply click on the "Merge Pull Request" button.</p>
+                        <div class="myCode">
+                            <img class="more-half-img" src="img/pull-request-3.png" alt="Conflicting Code">
+                        </div>
+                        <p>Another option is using the command line. For this, let's go back to our example from before. We created the hotfix branch and created a new commit. The pull request was oppened and the code was tested. Now we want to merge the code into the master code. Firstly, we need to go out of the hotfix branch and go to the master.</p>
+                        <div class="myCode">
+                            $ git checkout master
+                        </div>
+                        <p>Then we want to merge the hotfix branch.</p>
+                        <div class="myCode">
+                            $ git merge hotfix
+                        </div>
+                        <p>Now that we merged, our Master branch will point to the C4 commit, having the same code as hotfix.</p>
+                        <div class="myCode">
+                            <img class="half-img" src="img/basic-branching-5.png" alt="Merged Code">
+                        </div>
+                        <p>After merging, you can erase the branch if you want. You can also go back on working in the iss53 branch but remember that the new code that was in the C4 commit won't be in the branch unless you merge them.</p>
                     </div>
                 </div>
             </section>
