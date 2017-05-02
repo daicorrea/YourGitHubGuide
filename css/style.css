@@ -86,9 +86,13 @@ h2 {
 #footer {
     display: block;
     width: 100vw;
-    background-color: #18BC9C;
+    background-color: #2C3E50;;
     text-align: center;
     padding: 3% 0% 3% 0%;
+}
+
+#footer a {
+    color: #18BC9C;
 }
 
 .myCode {
