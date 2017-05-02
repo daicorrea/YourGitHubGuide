@@ -88,6 +88,7 @@ h2 {
     width: 100vw;
     background-color: #18BC9C;
     text-align: center;
+    padding: 3% 0% 3% 0%;
 }
 
 .myCode {
@@ -108,7 +109,7 @@ h2 {
     width: 100%;
 }
 
-.not-added {
+.not-added, .myHeart{
     color: red;
 }
 .added {
