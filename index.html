@@ -38,7 +38,7 @@
                     <h2>Creating a New Organization:</h2>
                     <div class="content">
                         <p>If you want to have a project with a team, you can create an organization and add whoever you want.</p>
-                        <p><img class="full-img" src="img/createOrg.png" alt="Create Organization Location on Git"></p>
+                        <p><img class="full-img" src="img/createOrg.png" alt="Create Organization Location on Github"></p>
                         <p>If you are in an external account, you have to choose your organization plan and enter your billing information.</p>
                         <p>If you are in a company account, the organization will be in your company's domain and it will only request the organization name and a contact email.</p>
                     </div>
@@ -57,7 +57,97 @@
             </section>
             <!--Starting a New Project-->
             <section id="project">
-                <h1>Starting a New Project</h1>
+                <div class="container-border">
+                    <h1>Starting a New Project</h1>
+                    <h2>Creating a New Repository (on Github):</h2>
+                    <div class="content">
+                        <p>To create a new repository on Github, just go to the Repository tab and click the "New" button, as showed bellow.</p>
+                        <p><img class="full-img" src="img/newRepo.png" alt="Create a new Repository on Github"></p>
+                        <p>Choose your repository's name, add a description to it, if you want to. Choose if it will be public or private and then click "Create Repository."</p>
+                        <p><img class="full-img" src="img/createRepo.png" alt="Create a new Repository on Github"></p>
+                        <p>Once you've created it, you will see the instructions you need to follow to initialize your remote repository.</p>
+                        <p><img class="full-img" src="img/emptyRepo.png" alt="Just created Repository on Github"></p>
+                    </div>
+                    <h2>Creating a New Repository (on your Desktop):</h2>
+                    <div class="content">
+                        <h4>Initializing a repository:</h4>
+                        <p>Enter your project's directory by the command line, and use the git command bellow to initialize a repository on that folder.</p>
+                        <div class="myCode">
+                            <p>$ git init</p>
+                        </div>
+                        <h4>Adding your files to track:</h4>
+                        <p>Once initialized, if you run the command "git status" you will see the status of all your project's content</p>
+                        <div class="myCode">
+                            <p>
+                                <ul class="no-style-list">
+                                    <li>On branch CURRENT_BRANCH</li>
+                                    <li>Changes not staged for commit:</li>
+                                    <li>(use "git add FILE_NAME..." to update what will be committed)</li>
+                                    <li>(use "git checkout -- FILE_NAME..." to discard changes in working directory)</li>
+                                    <li>
+                                        <ul class="no-style-list">
+                                            <li class="not-added">modified:   file_1.html</li>
+                                        </ul>
+                                    </li>
+
+                                    <li>Untracked files:</li>
+                                    <li>(use "git add FILE_NAME..." to include in what will be committed)</li>
+                                    <li>
+                                        <ul class="no-style-list">
+                                            <li class="not-added">img/img_1.png</li>
+                                            <li class="not-added">img/img_2.png</li>
+                                            <li class="not-added">img/img_3.png</li>
+                                        </ul>
+                                    </li>
+                                    <li>no changes added to commit (use "git add" and/or "git commit -a")</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <p>Now you will have to add all the files of your project's' directory to the git tracking.</p>
+                        <p>You do that by running the command "git add" and specifying which files / folders you want to add.</p>
+                        <p>In this case, we will use "git add ." to add everything that is on the current directory, since we are initializing our project on the remote, and want to push everything.</p>
+                        <div class="myCode">
+                            <p>$ git add .</p>
+                        </div>
+                        <p>Running again the "git status" command will show us that all our files were added to the git tracking:</p>
+                        <div class="myCode">
+                            <p>
+                                <ul class="no-style-list">
+                                    <li>On branch CURRENT_BRANCH</li>
+                                    <li>Changes to be commited:</li>
+                                    <li>(use "git reset HEAD FILE_NAME..." to unstage)</li>
+                                    <li>
+                                        <ul class="no-style-list">
+                                            <li class="added">modified:   file_1.html</li>
+                                            <li class="added">new file:   img_1.html</li>
+                                            <li class="added">modified:   img_2.html</li>
+                                            <li class="added">modified:   img_3.html</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <h4>Commiting your changes:</h4>
+                        <p>Now that we have added all our project's content to the git tracking, let's commit our changes by running the command "git commit" with the "-m" option, which means we can add the commit message right after</p>
+                        <div class="myCode">
+                            <p>$ git commit -m "My first commit"</p>
+                        </div>
+                        <h4>Specifying a remote repository:</h4>
+                        <p>Now we already have a local git repository, with all our files added and commited. It's time to specify the remote repository we want to push it to.</p>
+                        <p>We do that by running the command bellow and specifying the url of the remote repository we have created.</p>
+                        <div class="myCode">
+                            <p>$ git remote add origin REMOTE_URL</p>
+                        </div>
+                        <p>You can use each HTTPS or SSH url (you can find those urls at your remote repository page, as we see at the "Creating a New Repository (on Github)" topic's image), feel free to choose</p>
+                        <h4>Pushing your modifications to the remote:</h4>
+                        <p>Finally, to complete our work we have to push the commited changes to the remote repository.</p>
+                        <p>Just run the command "git push" with the option "-u" to add upstream (tracking) reference, and specifying the remote and the branch your want to push to (that, by default are called 'origin' and 'master', respectively).</p>
+                        <div class="myCode">
+                            <p>$ git push -u origin master</p>
+                        </div>
+                        <p>Congrats! Your project is initialized, both local and remotely.</p>
+                    </div>
+                </div>
             </section>
             <!--Creating Branches-->
             <section id="branches">
