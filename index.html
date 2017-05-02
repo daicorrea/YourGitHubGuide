@@ -61,18 +61,100 @@
             </section>
             <!--Creating Branches-->
             <section id="branches">
-                <h1>Creating Branches</h1>
+                <div class="container-border">
+                    <h1>Creating Branches</h1>
+                    <h2>What is a Branch?</h2>
+                    <div class="content">
+                        <p>A branch is an idependent line of development. The main branch in git is called <strong>Master</strong>. You can create how many branches your team thinks it's necessary for the project.</p>
+                        <p>But why create a branch if you can send your code directly to the master?</p>
+                        <p>Usually branches are used for new features, improvements or even bug fixes in some cases. It also helps with conflicts when one or more people are editing the same code.</p>
+                        <p>The code you use in a branch is completely different from other branches.</p>
+                    </div>
+                    <h2>How do I use Branches?</h2>
+                    <div class="content">
+                        <p>Let's start with an example when the project already have some commits (C0 = Commit 0; C1 = Commit1, ...)
+                        </p>
+                        <div class="myCode">
+                            <img class="half-img" src="img/basic-branching-1.png" alt="Master Branch">
+                        </div>
+                        <p>The fastest way to create a new branch is to use the following command line:</p>
+                        <div class="myCode">
+                            $ git checkout -b [branch-name]
+                        </div>
+                        <p>This is equivalent of using two other commands:</p>
+                        <div class="myCode">
+                            $ git branch -f [branch-name]
+                            $ git checkout [branch-name]
+                        </div>
+                        <p> The first command creates a new branch. The second one "enters" into a new branch. This means that your code will be the one that was last saved into the new branch.</p>
+                        <p>Let's create a new branch called "iss53":</p>
+                        <div class="myCode">
+                            $ git checkout -b iss53
+                        </div>
+                        <p>To start the branch will copy the code from the Master. We will have an environment similar to this one:</p>
+                        <div class="myCode">
+                            <img class="half-img" src="img/basic-branching-2.png" alt="New Branch iss53">
+                        </div>
+                        <p>Now Let's say you change something and make a new commit:</p>
+                        <div class="myCode">
+                            $ git commit -am 'Added a new footer'
+                        </div>
+                        <p>This means that our branch iss53 will be one commit ahead (C3 - Commit 3) of our master.</p>
+                        <div class="myCode">
+                            <img class="half-img" src="img/basic-branching-3.png" alt="Commiting">
+                        </div>
+                        <p>What if you have another issue to change that is more important that the one you are currectly working with on your branch iss53? Even if your work on branch iss53 is incomplete, you can create a new branch from the Master for the new issue and go back to iss53 later to continue your code. 
+                        First we have to change to the Master branch:</p>
+                        <div class="myCode">
+                            $ git checkout master
+                        </div>
+                        <p>Then we create a new branch called hotfix:</p>
+                        <div class="myCode">
+                            $ git checkout -b hotfix
+                        </div>
+                        <p>After that we make the changes we needed and commit our changes:</p>
+                        <div class="myCode">
+                            $ git commit -am 'fixed the broken feature'
+                        </div>
+                        <p>Our git will have a network like this now:</p>
+                        <div class="myCode">
+                            <img class="half-img" src="img/basic-branching-4.png" alt="New Branch hotfix with commit">
+                        </div>
+                        <p>When pushing into a branch, don't forget to put the name of the branch. Ex:</p>
+                        <div class="myCode">
+                            $ git push origin hotfix
+                        </div>
+                    </div>
+                    <h2>Pull Request</h2>
+                    <div class="content">
+                        <p>If you are working with a team and creating a new feature you can open a <trong>Pull Request</strong> to mean that you finished the code in the branch (a new feature, a bug fix, ...) and it can be tested. This can add to group discussions about changes that can be made to improve the code or just an approval of the code.</p>
+                        <p>To open a pull request, go to the branches tab on your project's page and in the line of your branch, you can click on the "New Pull Request" button.</p>
+                        <div class="myCode">
+                            <img class="full-img" src="img/pull-request.png" alt="New Pull Request">
+                        </div>
+                        <p>A new page with the pull request will be creating and you can access all the pull requests you have on the project in the "Pull Request" tab in your project.</p>
+                        <div class="myCode">
+                            <img class="full-img" src="img/pull-request-2.png" alt="New Pull Request Page">
+                        </div>
+                        <p>You can still create commits after you create the Pull Request.</p>
+                        <p>There are two possible </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
             </section>
             <!--Something is Wrong in my Code-->
-            <section id="wrong-code">
+            <!--<section id="wrong-code">
                 <h1>Something is Wrong With my Code</h1>
             </section>
-            <!--Something is Wrong in Master's' Code-->
+            <!--Something is Wrong in Master's' Code
             <section id="wrong-master">
                 <h1>Something is Wrong With the Master's Code</h1>
             </section>
-            <!--Using More than One Account-->
-            <section id="accounts"></section>
+            <!--Using More than One Account
+            <section id="accounts"></section>-->
         </div>
     </body>
 </html>

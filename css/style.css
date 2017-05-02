@@ -83,8 +83,11 @@ h2 {
     background-color: #2C3E50;
 }
 
-.mycode {
+.myCode {
     font-family: 'Inconsolata', monospace;
+    padding: 1%;
+    background-color: #FFF;
+    color: #000;
 }
 
 .content {
@@ -96,4 +99,8 @@ h2 {
 
 .full-img {
     width: 100%;
+}
+
+.half-img {
+    width: 50%;
 }
