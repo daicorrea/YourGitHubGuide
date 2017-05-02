@@ -111,3 +111,11 @@ h2 {
 .no-style-list {
     list-style-type: none;
 }
+
+.half-img {
+    width: 50%;
+}
+
+.more-half-img {
+    width: 75%;
+}
