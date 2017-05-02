@@ -101,6 +101,17 @@ h2 {
     width: 100%;
 }
 
+.not-added {
+    color: red;
+}
+.added {
+    color: green;
+}
+
+.no-style-list {
+    list-style-type: none;
+}
+
 .half-img {
     width: 50%;
 }
