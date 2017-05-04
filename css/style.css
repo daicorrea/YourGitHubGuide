@@ -136,3 +136,7 @@ h2 {
 .icon {
     width: 25%;
 }
+
+.aboutTitle, .startingGit, .creatingBranches, .startingProject {
+    cursor: pointer;
+}
