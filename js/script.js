@@ -16,3 +16,5 @@ $(".startingGit").click(collapsing(".startingGit"));
 $(".startingProject").click(collapsing(".startingProject"));
 
 $(".creatingBranches").click(collapsing(".creatingBranches"));
+
+$(".wrong-code").click(collapsing(".wrong-code"));
