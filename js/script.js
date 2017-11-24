@@ -13,6 +13,6 @@ $(".aboutTitle").click(collapsing(".aboutTitle"));
 
 $(".startingGit").click(collapsing(".startingGit"));
 
-$(".startingProject").click(fcollapsing(".startingProject"));
+$(".startingProject").click(collapsing(".startingProject"));
 
 $(".creatingBranches").click(collapsing(".creatingBranches"));
