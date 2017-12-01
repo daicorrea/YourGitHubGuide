@@ -17,4 +17,4 @@ $(".startingProject").click(collapsing(".startingProject"));
 
 $(".creatingBranches").click(collapsing(".creatingBranches"));
 
-$(".wrong-code").click(collapsing(".wrong-code"));
+$(".wrongLocalCode").click(collapsing(".wrongLocalCode"));
